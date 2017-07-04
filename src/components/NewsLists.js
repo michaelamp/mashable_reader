@@ -11,7 +11,7 @@ export default class NewsLists extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     });
 
-    this.dataSource = ds.cloneWithRows()
+    this.dataSource = ds.cloneWithRows();
   }
 
   render() {
