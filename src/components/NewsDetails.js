@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
 import {
-  View, Text
+  ScrollView, Image
 } from 'react-native';
+import { connect } from 'react-redux';
+import Header from './common/Header';
+import Card from './common/Card';
+import CardSection from './common/CardSection';
 
-export default class NewsDetails extends Component {
+class NewsDetails extends Component {
+  componentWillMount() {
+
+  }
+
   render() {
     return (
-      <View>
-        <Text>this is news details</Text>
-      </View>
+      <ScrollView>
+        <Header headerText={this.props.articles.title} />
+        <Card>
+          <Image
+            source={{ url: this.props.articles.urlToImage }}
+          />
+        </Card>
+        <CardSection>
+          {this.props.articles.description}
+        </CardSection>
+      </ScrollView>
     );
   }
 }
+
+export default connect(null)(NewsDetails);

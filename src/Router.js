@@ -6,7 +6,7 @@ import NewsDetails from './components/NewsDetails';
 const RouterComponent = () => {
   return (
     <Router sceneStyle={{ paddingTop: 65 }}>
-      <Scene>
+      <Scene key="main">
         <Scene key="newsLists" component={NewsLists} title="News Lists" />
         <Scene key="newsDetails" component={NewsDetails} title="" />
       </Scene>

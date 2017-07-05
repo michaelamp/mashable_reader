@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
 import {
-  View, Text
+  ListView
 } from 'react-native';
 import { connect } from 'react-redux';
 // import Card from './common/Card';
 
-export default class NewsLists extends Component {
+class NewsLists extends Component {
   componentWillMount() {
     const ds = new NewsLists.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
 
-    this.dataSource = ds.cloneWithRows();
+    this.dataSource = ds.cloneWithRows(this.props.articles);
   }
 
   render() {
     return (
-      <View>
-        <Text>{this.props.Header}</Text>
-      </View>
+      <ListView
+        dataSource={this.dataSource}
+      />
     );
   }
 }
+
+const mapStateToProps = state => {
+  return { articles: state.articles };
+};
+
+export default connect(mapStateToProps)(NewsLists);

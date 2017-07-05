@@ -8,12 +8,12 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "native-base": "^2.1.5",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.44.2",
-    "react-native-router-flux": "^3.40.1",
+    "native-base": "^2.2.0",
+    "react": "^16.0.0-alpha.6",
+    "react-native": "^0.44.2",
+    "react-native-router-flux": "^3.41.0",
     "react-redux": "^5.0.5",
-    "redux": "^3.7.0",
+    "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
   },

@@ -3,9 +3,9 @@ import {
   FETCH_NEWS_LISTS
 } from './types';
 
-export const fetchNewsLists = ({ value }) => {
+export const fetchNewsLists = () => {
   return {
     type: FETCH_NEWS_LISTS,
-    payload: { value }
+    payload: 'asdf'
   };
 };
