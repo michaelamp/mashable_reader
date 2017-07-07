@@ -3,6 +3,7 @@ import {
   ListView
 } from 'react-native';
 import { connect } from 'react-redux';
+import { FETCH_NEWS_LISTS } from '../actions/types';
 // import Card from './common/Card';
 
 class NewsLists extends Component {
@@ -27,4 +28,4 @@ const mapStateToProps = state => {
   return { articles: state.articles };
 };
 
-export default connect(mapStateToProps)(NewsLists);
+export default connect(mapStateToProps, { FETCH_NEWS_LISTS })(NewsLists);
